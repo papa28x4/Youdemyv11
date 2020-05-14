@@ -25,8 +25,9 @@ class Student extends Component {
                  category:"",
                  sort: "",
                  order: "",
-                 topRated: ""
+                 topRated: "",
             },
+            end: false, 
             students: "",
             aggregateRating: ""
         }
@@ -76,9 +77,8 @@ class Student extends Component {
        
         let num = page || this.state.page 
         let endpoint = `${jsonServer}/videos?title_like=${title}&q=${q}&instructor_like=${instructor}&category_like=${category}&_page=${num}&_limit=5&_sort=${sort}&_order=${order}`;
-        console.log(endpoint)
-        const res = await fetch(endpoint);
-        const videos = await res.json()
+        // console.log(endpoint)
+        const videos = await fetch(endpoint).then(res=>res.json());
         if (page){
             this.setState({
                 sVideos: [...videos],
@@ -88,18 +88,27 @@ class Student extends Component {
                     instructor,
                     category,
                     sort,
-                    order
-                }
+                    order,
+                },
+                page: 1,
+                end: false
             }, ()=>{
-                console.log(this.state.sVideos)
-                console.log(this.state.params)
+                // console.log(this.state.sVideos)
+                // console.log(this.state.params)
             })
         }else{
             this.setState({
                 sVideos: [...this.state.sVideos, ...videos],
                
-            }, ()=>{
+            }, async ()=>{
                 // console.log(this.state.sVideos)
+                let endpoint = `${jsonServer}/videos?title_like=${title}&q=${q}&instructor_like=${instructor}&category_like=${category}&_page=${num+1}&_limit=5&_sort=${sort}&_order=${order}`;
+                const videos = await fetch(endpoint).then(res => res.json());
+                if(videos.length === 0){
+                    this.setState({
+                        end: true, 
+                    })
+                }
             })
         }
         
@@ -193,7 +202,7 @@ class Student extends Component {
 
     render() {
         const {id, videos, addFavorites,removeFavorite,favorites, getAllVideos, userType, logout, auth, firstTime} = this.props;
-        const { nowPlaying, index, sVideos, topRated} = this.state;
+        const { nowPlaying, index, sVideos, topRated, end} = this.state;
      
         const loadInitVideo = ()=>{
             
@@ -317,7 +326,7 @@ class Student extends Component {
                             )
                         })
                     }
-                        <button id="btn-more" className="mt-2" onClick={(event)=>{this.loadMore()}}>Load More</button>
+                        {!end && <button id="btn-more" className="mt-3 btn btn-primary" onClick={(event)=>{this.loadMore()}}>Load More</button>}
                     </div>
                     
                 </div>

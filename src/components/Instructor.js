@@ -521,10 +521,10 @@ class Instructor extends Component {
                              <div> <Star getAvgRating={this.getAvgRating} index={index} /></div>
                                  {
                                      (!edited)?
-                                    <div><button className="operations" id="edit" onClick={this.editVideoDetails}>Edit</button>
-                                    <button className="operations" id="edit" onClick={()=>{this.deleteVideo(index)}}>Delete</button></div>  :
-                                    <div><button className="operations" id="save" onClick={this.updateVideoDetails}>Save</button>
-                                    <button className="operations" id="cancel" onClick={this.returnPrevState}>Cancel</button></div>
+                                    <div><button className="operations btn btn-success" id="edit" onClick={this.editVideoDetails}>Edit</button>
+                                    <button className="operations btn btn-danger" id="edit" onClick={()=>{this.deleteVideo(index)}}>Delete</button></div>  :
+                                    <div><button className="operations btn btn-success" id="save" onClick={this.updateVideoDetails}>Save</button>
+                                    <button className="operations btn btn-danger" id="cancel" onClick={this.returnPrevState}>Cancel</button></div>
                                  }
                         </div>
                         )
