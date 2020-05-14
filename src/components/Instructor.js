@@ -491,7 +491,7 @@ class Instructor extends Component {
                         <div>Operations</div>
                     </div>
                 {
-                    myVideos.map((myVideo, index) =>{ 
+                    myVideos.slice(0).reverse().map((myVideo, index) =>{ 
                         
                      return(
                          <div  className="instructor-videos" key={myVideo.id} data-id={myVideo.id} data-index={index}>
