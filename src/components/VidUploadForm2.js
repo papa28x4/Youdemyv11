@@ -77,7 +77,7 @@ class VidUploadForm extends Component {
                                             {   
                                                 this.props.photoURL && <div>
                                                     {!this.state.imageClicked && <p style={{fontSize: "10px", color: "blue"}}>Have your own cover-image? Click on thumbnail to change</p>}
-                                                    <img  src={this.props.photoURL} style={{width:"135px", height:"90px"}} title="click to change thumbnail" alt="thumbnail" onClick={(event) => this.uploadHandler(event)}/>
+                                                    <img  src={this.props.photoURL} style={{width:"135px", height:"90px", cursor: "pointer"}} title="click to change thumbnail" alt="thumbnail" onClick={(event) => this.uploadHandler(event)}/>
                                                 </div>
                                             }
                                             

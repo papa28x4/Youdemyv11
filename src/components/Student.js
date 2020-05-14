@@ -159,10 +159,8 @@ class Student extends Component {
    }
 
   isFavorite = (videoId, id)=>{
-    console.log(videoId, id)
-    console.log(this.props.favorites)
+    
     let b = this.props.favorites.find(favorite => favorite.videoId === videoId && favorite.studentId === id)
-    console.log(b)
     return b
  }
 
@@ -319,7 +317,7 @@ class Student extends Component {
                             )
                         })
                     }
-                        <button id="btn-more" onClick={(event)=>{this.loadMore()}}>Load More</button>
+                        <button id="btn-more" className="mt-2" onClick={(event)=>{this.loadMore()}}>Load More</button>
                     </div>
                     
                 </div>
