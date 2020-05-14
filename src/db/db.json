@@ -1,0 +1,436 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Felicia",
+      "url": "https://i.imgur.com/U2LWLUY.png",
+      "email": "codebaby@si.com"
+    },
+    {
+      "id": 2,
+      "name": "Paul",
+      "url": "https://i.imgur.com/Z7xTUZd.png",
+      "email": "psmith@si.com"
+    },
+    {
+      "name": "Ekeoma Ebiri-Okoro",
+      "email": "papa28x4@gmail.com",
+      "url": "https://i.imgur.com/ryAJEC8.png",
+      "id": 3
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "JStut",
+      "url": "https://i.imgur.com/p1CDOxX.jpg",
+      "email": "webtutor@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "JavaBrains",
+      "url": "https://i.imgur.com/CdYuT8F.png",
+      "email": "javabrains@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Brad Traversy",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "traversymedia@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Roberto Kiyosaki",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "kiyosaki@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Design Ninja",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "dNinja@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "Dark Arts",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "darkarts@gmail.com"
+    },
+    {
+      "id": 7,
+      "name": "Phillip Kotler",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "pKotler@gmail.com"
+    },
+    {
+      "id": 8,
+      "name": "Angela Yu",
+      "url": "https://i.imgur.com/prvOLxk.png",
+      "email": "angelayu@gmail.com"
+    },
+    {
+      "name": "Ekeoma",
+      "email": "papa28x4@gmail.com",
+      "url": "https://i.imgur.com/ryAJEC8.png",
+      "id": 9
+    }
+  ],
+  "videos": [
+    {
+      "title": "Productivity and Time Management",
+      "description": "Time is a gift and it's of the essence. It's what sets apart achievers from the rest. Motion is not progress",
+      "link": "https://i.imgur.com/z5XEtMq.mp4",
+      "instructorId": 7,
+      "instructor": "Phillip Kotler",
+      "coverImage": "https://i.imgur.com/6TPUEJO.jpg",
+      "category": "Personal",
+      "edited": false,
+      "createdAt": 1588184006027,
+      "id": 1,
+      "duration": 19.05,
+      "rating": 4.5
+    },
+    {
+      "title": "Certified Kubernetes",
+      "description": "Prepare for the Certified Kubernetes Administrators Certification with live practice tests right in your browser",
+      "link": "https://i.imgur.com/LpMeHvL.mp4",
+      "instructorId": 2,
+      "instructor": "JavaBrains",
+      "coverImage": "https://i.imgur.com/lk6kC6n.jpg",
+      "category": "IT&Software",
+      "edited": true,
+      "createdAt": 1588462518066,
+      "id": 2,
+      "lastModified": 1588625179654,
+      "duration": 19.05,
+      "rating": 0
+    },
+    {
+      "title": "Learn Ethical Hacker",
+      "description": "Learn how to hack systems like black hat hackers and secure them like security experts. Key Features: Understand how computer systems work and their vulnerabilities. Exploit weaknesses and hack into machines ",
+      "link": "https://i.imgur.com/VJzjrbV.mp4",
+      "instructorId": 2,
+      "instructor": "JavaBrains",
+      "coverImage": "https://i.imgur.com/sPNdBix.jpg",
+      "category": "IT&Software",
+      "edited": true,
+      "createdAt": 1588463144652,
+      "id": 3,
+      "lastModified": 1588627323176,
+      "duration": 47.34,
+      "rating": 5
+    },
+    {
+      "title": "Java Masterclass",
+      "description": "Java 9 - Building Java FX, Springboot and Vaadin Java Applications. Includes Advanced Java Concepts",
+      "link": "https://i.imgur.com/4bR0ULh.mp4",
+      "instructorId": 2,
+      "instructor": "JavaBrains",
+      "coverImage": "https://i.imgur.com/yrkupDn.jpg",
+      "category": "Development",
+      "edited": true,
+      "createdAt": 1588463295679,
+      "id": 4,
+      "lastModified": 1588627919766,
+      "duration": 54.5,
+      "rating": 3.5
+    },
+    {
+      "title": "Angular",
+      "description": "Build real world apps with Angular",
+      "link": "https://i.imgur.com/uPaLq9C.mp4",
+      "instructorId": 2,
+      "instructor": "JavaBrains",
+      "coverImage": "https://i.imgur.com/PP08U6t.jpg",
+      "category": "Development",
+      "edited": true,
+      "createdAt": 1588490936306,
+      "id": 5,
+      "lastModified": 1588629344512,
+      "duration": 54.53,
+      "rating": 0
+    },
+    {
+      "title": "Data Science",
+      "description": "Design distributed systems that manage Big Data using Hadoop and related technologies",
+      "link": "https://i.imgur.com/xCKbKTS.mp4",
+      "instructorId": 2,
+      "instructor": "JavaBrains",
+      "coverImage": "https://i.imgur.com/tJUyiZ2.jpg",
+      "category": "Development",
+      "edited": true,
+      "createdAt": 1588492135535,
+      "id": 6,
+      "lastModified": 1588629483950,
+      "duration": 54.51,
+      "rating": 0
+    },
+    {
+      "title": "Javascript Weird Parts",
+      "description": "In this tutorial I will try to demonstrate some funny / weird parts in JavaScript. Besides its flaws we are using it and we are loving it! ",
+      "link": "https://i.imgur.com/u79WOPN.mp4",
+      "instructorId": 1,
+      "instructor": "Jstut",
+      "coverImage": "https://i.imgur.com/rK3ERMW.jpg",
+      "category": "Development",
+      "edited": false,
+      "createdAt": 1588630454589,
+      "id": 7,
+      "duration": 54.57,
+      "rating": 0
+    },
+    {
+      "title": "The Complete Javascript Course 2020",
+      "description": "In this tutorial we take a deep dive laying a concrete foundation that we enable you build two  real world apps using Javascript",
+      "link": "https://i.imgur.com/aAeJKji.mp4",
+      "instructorId": 1,
+      "instructor": "Jstut",
+      "coverImage": "https://i.imgur.com/uFU7ez9.jpg",
+      "category": "Development",
+      "edited": false,
+      "createdAt": 1588631948865,
+      "id": 8,
+      "duration": 54.55,
+      "rating": 0
+    },
+    {
+      "title": "Get Complete Financial Freedom",
+      "description": "Leave the rat race and become financially independent",
+      "link": "https://i.imgur.com/rJJgpQS.mp4",
+      "instructorId": 4,
+      "instructor": "Roberto Kiyosaki",
+      "coverImage": "https://i.imgur.com/LTN4FI0.jpg",
+      "category": "Business",
+      "edited": true,
+      "createdAt": 1588633588333,
+      "id": 9,
+      "lastModified": 1588634615280,
+      "duration": 54.26,
+      "rating": 0
+    },
+    {
+      "title": "Forex",
+      "description": "Learn Forex Online At Your Own Pace. Start Today and Become an Expert in Days. 30-Day Money-Back Guarantee!",
+      "link": "https://i.imgur.com/bkdRMDP.mp4",
+      "instructorId": 4,
+      "instructor": "Roberto Kiyosaki",
+      "coverImage": "https://i.imgur.com/NPFH3o7.jpg",
+      "category": "Business",
+      "edited": true,
+      "createdAt": 1588634508554,
+      "id": 10,
+      "lastModified": 1588634630237,
+      "duration": 54.5,
+      "rating": 0
+    },
+    {
+      "title": "Learn Adobe Illustrator",
+      "description": "Learn techniques for Adobe Illustrator covering creating vector portraits, character art, 3D shapes, illustrated maps and graphics and more.",
+      "link": "https://i.imgur.com/dt3FGEb.mp4",
+      "instructorId": 5,
+      "instructor": "Design Ninja",
+      "coverImage": "https://i.imgur.com/JUW7sxx.jpg",
+      "category": "Design",
+      "edited": false,
+      "createdAt": 1588635243692,
+      "id": 11,
+      "duration": 54.43,
+      "rating": 0
+    },
+    {
+      "title": "Make Epic Videos",
+      "description": "YouTube, Facebook, IGTV, etc. They all want one thing from you... Great Content! Let's start creating!",
+      "link": "https://i.imgur.com/QwvgPVR.mp4",
+      "instructorId": 5,
+      "instructor": "Design Ninja",
+      "coverImage": "https://i.imgur.com/s4lfxpA.jpg",
+      "category": "Photography",
+      "edited": false,
+      "createdAt": 1588636042642,
+      "id": 12,
+      "duration": 54.45,
+      "rating": 0
+    },
+    {
+      "title": "Character Art School",
+      "description": "The Best Way to Learn to Color and Paint Professional Characters for Animation, Games, Comics, Manga and More.",
+      "link": "https://i.imgur.com/XMnqmy0.mp4",
+      "instructorId": 6,
+      "instructor": "Dark Arts",
+      "coverImage": "https://i.imgur.com/FRYUuFP.jpg",
+      "category": "Design",
+      "edited": false,
+      "createdAt": 1588636747525,
+      "id": 13,
+      "duration": 54.24,
+      "rating": 0
+    },
+    {
+      "title": "Marketing Psychology",
+      "description": "As consumers, we are irrational, and our decision-making is largely driven by these innate biases. Learn what drives customers buying behavior",
+      "link": "https://i.imgur.com/jgAKYDc.mp4",
+      "instructorId": 7,
+      "instructor": "Phillip Kotler",
+      "coverImage": "https://i.imgur.com/7KRhL5y.jpg",
+      "category": "Marketing",
+      "edited": false,
+      "createdAt": 1588639342861,
+      "id": 14,
+      "duration": 54.34,
+      "rating": 3.5
+    },
+    {
+      "title": "Instagram Marketing",
+      "description": "Become a Instagram Marketing Pro with these valuable skills. Start Your Course Today",
+      "link": "https://i.imgur.com/6cDSneT.mp4",
+      "instructorId": 7,
+      "instructor": "Phillip Kotler",
+      "coverImage": "https://i.imgur.com/KOCbjsC.jpg",
+      "category": "Marketing",
+      "edited": false,
+      "createdAt": 1588640049047,
+      "id": 15,
+      "duration": 54.56,
+      "rating": 0
+    },
+    {
+      "title": "Web Development Crash course",
+      "description": "Teach all you need to know to become that full-stack developer you always wanted to be",
+      "link": "https://i.imgur.com/w8GUFnj.mp4",
+      "instructorId": 3,
+      "instructor": "Brad Traversy",
+      "coverImage": "https://i.imgur.com/m0nT1sP.jpg",
+      "category": "Development",
+      "edited": false,
+      "createdAt": 1588640945632,
+      "id": 16,
+      "duration": 54.55,
+      "rating": 4
+    },
+    {
+      "title": "Learn iOS13 and Swift 5",
+      "description": "From Beginner to iOS App Developer with Just One Course! Fully Updated with a Comprehensive Module Dedicated to SwiftUI!",
+      "link": "https://i.imgur.com/1rJtdkt.mp4",
+      "instructorId": 8,
+      "instructor": "Angela Yu",
+      "coverImage": "https://i.imgur.com/L16gtd5.jpg",
+      "category": "Development",
+      "edited": false,
+      "createdAt": 1589372513949,
+      "id": 17,
+      "duration": 44.52,
+      "rating": 4.33
+    },
+    {
+      "title": "Instagram Marketing",
+      "description": "Become a Instagram Marketing Pro with these valuable skills. Start Your Course Today",
+      "link": "https://i.imgur.com/6cDSneT.mp4",
+      "instructorId": 9,
+      "instructor": "Phillip Kotler",
+      "coverImage": "https://i.imgur.com/KOCbjsC.jpg",
+      "category": "Marketing",
+      "edited": false,
+      "createdAt": 1588640049047,
+      "id": 18,
+      "duration": 54.56,
+      "rating": 0
+    }
+  ],
+  "favoriteVideos": [
+    {
+      "studentId": 2,
+      "videoId": 4,
+      "id": 2
+    },
+    {
+      "studentId": 3,
+      "videoId": 4,
+      "id": 3
+    },
+    {
+      "studentId": 3,
+      "videoId": 1,
+      "id": 4
+    }
+  ],
+  "stars": [
+    {
+      "rating": 4,
+      "videoId": 1,
+      "studentId": 3,
+      "id": 1
+    },
+    {
+      "rating": 4,
+      "videoId": 16,
+      "studentId": 3,
+      "id": 2
+    },
+    {
+      "rating": 4,
+      "videoId": 4,
+      "studentId": 3,
+      "id": 3
+    },
+    {
+      "rating": 5,
+      "videoId": 3,
+      "studentId": 3,
+      "id": 4
+    },
+    {
+      "rating": 3,
+      "videoId": 14,
+      "studentId": 3,
+      "id": 5
+    },
+    {
+      "rating": 5,
+      "videoId": 17,
+      "studentId": 3,
+      "id": 6
+    },
+    {
+      "rating": 5,
+      "videoId": 1,
+      "studentId": 1,
+      "id": 7
+    },
+    {
+      "rating": 4,
+      "videoId": 16,
+      "studentId": 1,
+      "id": 8
+    },
+    {
+      "rating": 3,
+      "videoId": 4,
+      "studentId": 1,
+      "id": 9
+    },
+    {
+      "rating": 5,
+      "videoId": 3,
+      "studentId": 1,
+      "id": 10
+    },
+    {
+      "rating": 4,
+      "videoId": 14,
+      "studentId": 1,
+      "id": 11
+    },
+    {
+      "rating": 4,
+      "videoId": 17,
+      "studentId": 2,
+      "id": 12
+    },
+    {
+      "rating": 4,
+      "videoId": 17,
+      "studentId": 1,
+      "id": 13
+    }
+  ]
+}

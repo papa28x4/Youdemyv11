@@ -1,0 +1,13 @@
+.google-btn>*{
+    margin-right: 1em;
+}
+
+.navbar-fixed-top{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+ul.navbar-nav.container-fluid{
+    justify-content: center;
+}
