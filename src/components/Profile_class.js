@@ -135,7 +135,7 @@ class Profile_class extends Component {
                                         For other advance search options, use the search menu on the left`
                   }, 10000);
                 setTimeout(() => {
-                    msg.innerHTML = `<strong>Tip 3: </strong> Click on the heart icon, if you want to add to favorites`
+                    msg.innerHTML = `<strong>Tip 3: </strong> Click on the heart icon, to toggle between adding to and removing from favorites`
                   }, 20000);
                   setTimeout(() => {
                     msg.innerHTML = `<strong>Thank you for Signing Up</strong>`
@@ -145,7 +145,7 @@ class Profile_class extends Component {
                   }, 30000);
               }else{
                 setTimeout(() => {
-                    msg.innerHTML = `<strong>Tip 2: </strong> When adding a Video always remember to save your uploaded video. Saving links your uploaded video to your account`
+                    msg.innerHTML = `<strong>Tip 2: </strong> When adding a Video always remember to save after uploading. Saving links your uploaded video to your account`
                   }, 10000);
                 setTimeout(() => {
                     msg.innerHTML = `<strong>Thank you for Signing Up</strong>`

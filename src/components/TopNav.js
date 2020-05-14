@@ -17,8 +17,8 @@ class TopNav extends Component {
         const { searchForVideos, userType, auth, responseGoogle2, logout, setUserAsStudent, setUserAsInstructor, name } = this.props;
         const navMargin = userType === "students" ? {marginLeft: "200px"} : {marginLeft: "0px"}
         
-        // const clientId = "162505339244-iimp598v04e9qte280cmr7395uvdaoec.apps.googleusercontent.com";
-        const clientId = "436551727204-c20npou3chehe6cv6i0sa481ua9n5a0j.apps.googleusercontent.com"
+        const clientId = "162505339244-2d8n2tp3uesnd3o2n1ssj2hhtvfo0t96.apps.googleusercontent.com";
+        // const clientId = "436551727204-c20npou3chehe6cv6i0sa481ua9n5a0j.apps.googleusercontent.com"
         
         const login_out =()=>{
             if(auth){
