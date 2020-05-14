@@ -295,15 +295,16 @@ class Instructor extends Component {
                })
              }, 5000); 
         }else{
+
             const update = {    
                 title,
                 description,
-                coverImage: photoURL,
                 category,
                 edited,
                 "lastModified" : Date.now()
                         }
 
+            if(photoURL){update.coverImage = photoURL}
             fetch(`${jsonServer}/videos/${videoId}`, {
 
             method: "PATCH",
