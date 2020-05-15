@@ -144,13 +144,27 @@ class Student extends Component {
             })
         }else if(timestamp + 86400000 < Date.now()){
             date = "Yesterday"
-        }else if(Date.now()-timestamp <= 900000){
+        }else if(Date.now()-timestamp <= 300000){
             date = "Just Now"
         }else{
             date = "Today"
         }
         return date
    }
+
+   formatDuration =(duration)=>{
+        duration = parseInt(duration)
+    
+        let durhrs = Math.floor(duration / 3600);
+        let durmins = Math.floor(duration / 60);
+        let dursecs = Math.floor(duration % 60);
+    
+        durhrs = durhrs < 10?  "0"+durhrs: durhrs;
+        durmins = durmins < 10?  "0"+durmins: durmins;
+        dursecs = dursecs < 10?  "0"+dursecs: dursecs;
+        let formattedTime = `${durmins} : ${dursecs}`;
+        return formattedTime
+    }
 
    recentUpload=(timestamp)=>{
         const isRecent = (Date.now()-timestamp <= 86400000)? true : false;
@@ -179,6 +193,8 @@ class Student extends Component {
             topRated: +topRated
         })
  }
+
+ 
 
 //  const {index, getAvgRating, sVideos} = this.props;
  // console.log(this.props)
@@ -290,6 +306,7 @@ class Student extends Component {
                             let desc = this.abridged(video.description, 115)
                             let date = this.formatDate(video.createdAt)
                             let recent = this.recentUpload(video.createdAt)
+                            let duration = this.formatDuration(video.duration)
                             return(
                                 
                                     <div  key={video.id}>
@@ -299,7 +316,7 @@ class Student extends Component {
                                                         { video.id !== topRated && <span style={{visibility:  recent? "visible": "hidden"}} className="badge badge-pill badge-warning mb-2">New</span>}
                                                         {video.id === topRated && <span className="badge badge-pill badge-warning mb-2">Top Rated</span>}
                                                         <img src={video.coverImage} alt="course cover" className="thumb nail"  />
-                                                        <small className="duration">{video.duration.toFixed(2)}</small> 
+                                                        <small className="duration">{duration}</small> 
                                                         <div> <Star getAvgRating={getAvgRating} index={i} sVideos={sVideos} userType={userType} /></div>
                                                     </div>
                                                     <div className="details meta">
