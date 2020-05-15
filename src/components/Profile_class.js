@@ -145,7 +145,7 @@ class Profile_class extends Component {
                   }, 30000);
               }else{
                 setTimeout(() => {
-                    msg.innerHTML = `<strong>Tip 2: </strong> When adding a Video always remember to save after uploading. Saving links your uploaded video to your account`
+                    msg.innerHTML = `<strong>Tip 2: </strong> Adding a Video is 2-step process: You upload then you save. Saving links your uploaded video to your account`
                   }, 10000);
                 setTimeout(() => {
                     msg.innerHTML = `<strong>Thank you for Signing Up</strong>`

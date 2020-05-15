@@ -146,6 +146,8 @@ class Student extends Component {
             date = "Yesterday"
         }else if(Date.now()-timestamp <= 300000){
             date = "Just Now"
+        }else if(Date.now()-timestamp < 3600000){
+            date = `${Math.floor((Date.now()-timestamp) / 60000)} mins ago`
         }else{
             date = "Today"
         }

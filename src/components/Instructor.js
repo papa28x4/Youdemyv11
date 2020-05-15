@@ -72,45 +72,57 @@ class Instructor extends Component {
                 console.log(photos);
             if(photos.event === 'success'){
                 console.log('secure url', photos.info.secure_url)
-                
-                // console.log(event)
-                if(btnClicked === 'video'){
-                
-                    this.setState({
-                        videos: [...this.state.videos, photos.info.public_id],
-                        videoURL:photos.info.secure_url, 
-                        photoURL:photos.info.thumbnail_url, 
-                        duration: photos.info.duration, 
-                        publicId:photos.info.public_id
-                    }, ()=>{
-                        console.log(this.state)
-                    })
-        
-                }else{
-                    this.setState({
-                        images:[...this.state.images, photos.info.public_id],
-                        photoURL:photos.info.secure_url, 
-                        imageClicked:true
-                    },()=>{
-                        console.log('I indeed came here')
-                        if(btnClickedClass === 'nail'){
-                            console.log('met the conditon')
+                if(photos.info.resource_type === "video" || photos.info.resource_type === "image" ){
+                    // console.log(event)
+                    if(btnClicked === 'video'){
+                    //check if upload is video
+                        if(photos.info.resource_type === "video"){
                             this.setState({
-                                editMsg : true,
-                                imageClicked: false,
-                                opsMsg: "Not to worry, your new thumbnail will reflect when you save. Continue with other changes when done, click save"
+                                videos: [...this.state.videos, photos.info.public_id],
+                                videoURL:photos.info.secure_url, 
+                                photoURL:photos.info.thumbnail_url, 
+                                duration: photos.info.duration, 
+                                publicId:photos.info.public_id
+                            }, ()=>{
+                                console.log(this.state)
                             })
-                            setTimeout(() => {
-                                this.setState({
-                                    editMsg : false,
-                                    opsMsg: ""
-                                })
-                              }, 10000);   
+                        }else{
+                            alert(`Expecting a video but you uploaded ${photos.info.format}. Please upload video`)
                         }
-                    })
-                    
+                        
+            
+                    }else{
+                        if(photos.info.resource_type === "image"){
+                            this.setState({
+                                images:[...this.state.images, photos.info.public_id],
+                                photoURL:photos.info.secure_url, 
+                                imageClicked:true
+                            },()=>{
+                                console.log('I indeed came here')
+                                if(btnClickedClass === 'nail'){
+                                    console.log('met the conditon')
+                                    this.setState({
+                                        editMsg : true,
+                                        imageClicked: false,
+                                        opsMsg: "Not to worry, your new thumbnail will reflect when you save. Continue with other changes when done, click save"
+                                    })
+                                    setTimeout(() => {
+                                        this.setState({
+                                            editMsg : false,
+                                            opsMsg: ""
+                                        })
+                                    }, 10000);   
+                                }
+                            })
+                        } else{
+                            alert(`Expecting an image but you uploaded ${photos.info.format}. Please upload an image`)
+                        }
+                    }
+                    targetBtn.disabled = false;
+
+                }else{
+                    alert("You have uploaded an unsupported file type. Images and videos only")
                 }
-                targetBtn.disabled = false;
             }else if(photos.event === 'abort'){
                 targetBtn.disabled = false;
             }
@@ -451,7 +463,7 @@ class Instructor extends Component {
             if(nowPlaying){
               return <ReactPlayer url={nowPlaying}  controls pip />
             } else if(myVideos.length>0){
-              return <ReactPlayer url={this.props.myVideos[0].link} controls pip />
+              return <ReactPlayer url={this.props.myVideos[myVideos.length - 1].link} controls pip />
             }
         }
   
