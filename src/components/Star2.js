@@ -22,7 +22,7 @@ function Star(props) {
             })
             const result = await res.json()
             setRating(result.rating)
-            // props.checkTopRated()
+            props.checkTopRated(videoId)
             
     }
     

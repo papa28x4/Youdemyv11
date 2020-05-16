@@ -73,10 +73,17 @@ class Student extends Component {
         this.searchForVideos(1,"","","","",sort,order)
     }
     
-    searchForVideos=async (page="", title="", q="", instructor="", category="", sort="", order="")=>{
+    searchForVideos=async (page="", title="", q="", instructor="", category="", sort="", order="", starClicked)=>{
        
-        let num = page || this.state.page 
-        let endpoint = `${jsonServer}/videos?title_like=${title}&q=${q}&instructor_like=${instructor}&category_like=${category}&_page=${num}&_limit=5&_sort=${sort}&_order=${order}`;
+        let num = page || this.state.page;
+        let endpoint;
+        if(!starClicked){
+            endpoint = `${jsonServer}/videos?title_like=${title}&q=${q}&instructor_like=${instructor}&category_like=${category}&_page=${num}&_limit=5&_sort=${sort}&_order=${order}`;
+        }else{
+            endpoint = `${jsonServer}/videos?title_like=${title}&q=${q}&instructor_like=${instructor}&category_like=${category}&_page=1&_limit=${5*num}&_sort=${sort}&_order=${order}`;
+        }
+        
+
         // console.log(endpoint)
         const videos = await fetch(endpoint).then(res=>res.json());
         if (page){
@@ -112,6 +119,17 @@ class Student extends Component {
             })
         }
         
+    }
+
+    loadMore=(starClicked=false)=>{
+        this.setState({
+            page: this.state.page + 1
+        },()=>{
+            console.log('page', this.state.page)
+            const {title, q, instructor, category, sort, order} = this.state.params
+            this.searchForVideos("", title, q, instructor, category, sort, order, starClicked)
+           
+        })
     }
 
     abridged=(description, len)=>{
@@ -157,11 +175,9 @@ class Student extends Component {
    formatDuration =(duration)=>{
         duration = parseInt(duration)
     
-        let durhrs = Math.floor(duration / 3600);
         let durmins = Math.floor(duration / 60);
         let dursecs = Math.floor(duration % 60);
     
-        durhrs = durhrs < 10?  "0"+durhrs: durhrs;
         durmins = durmins < 10?  "0"+durmins: durmins;
         dursecs = dursecs < 10?  "0"+dursecs: dursecs;
         let formattedTime = `${durmins} : ${dursecs}`;
@@ -173,15 +189,7 @@ class Student extends Component {
         return isRecent
     }
 
-   loadMore=()=>{
-       this.setState({
-           page: this.state.page + 1
-       },()=>{
-           console.log('page', this.state.page)
-           const {title, q, instructor, category, sort, order} = this.state.params
-           this.searchForVideos("", title, q, instructor, category, sort, order)
-       })
-   }
+  
 
   isFavorite = (videoId, id)=>{
     
@@ -189,10 +197,28 @@ class Student extends Component {
     return b
  }
 
- checkTopRated=async ()=>{
+ checkTopRated=async (videoId)=>{
+     console.log('video that was starred', videoId)
     const topRated = await getAllRatings()
         this.setState({
             topRated: +topRated
+        },async()=>{
+            if(videoId){
+                const res = await fetch(`${jsonServer}/videos/${videoId}`);
+                const video = await res.json()
+                console.log(video)
+                let index = this.state.sVideos.findIndex(sVideo => sVideo.id === videoId)
+                let a = this.state.sVideos.slice(0)
+                let b = a.splice(index,1,video)
+                // let a = this.state.sVideos.slice(0).splice(index,1,video)
+                console.log(index, a, b)
+                this.setState({ 
+                    sVideos:   a
+                },()=>{
+                    console.log('current state', this.state.sVideos)
+                })
+            }
+            
         })
  }
 

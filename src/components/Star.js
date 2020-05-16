@@ -11,12 +11,22 @@ class Star extends Component {
         
     }
 
+    componentDidUpdate(prevProps, prevState){
+      const {index, sVideos} = this.props;
+      if(prevProps.sVideos[index] !== sVideos[index]){
+        this.setState({
+          aggregateRating: sVideos[index].rating,
+          students: sVideos[index].stds
+        });
+      }
+    }
+
     componentDidMount(){
       const {index, getAvgRating, sVideos} = this.props;
-      // console.log(this.props)
+      
       const retrieveRating = async()=>{
           const temp = await getAvgRating(sVideos)
-          // console.log(temp)
+          
           if(!isNaN(temp[0][index])){
               this.setState({
                 aggregateRating: temp[0][index],

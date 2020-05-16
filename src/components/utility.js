@@ -43,7 +43,7 @@ export const getAvgRating=async (myVideos)=>{
 
 
 
-export const addRating=async (store) =>{
+export const addRating=async (store, stds) =>{
     
     for(let key in store){
         
@@ -52,7 +52,9 @@ export const addRating=async (store) =>{
                 headers: {
                     'content-Type': "application/json",
                 },          
-                body: JSON.stringify({rating:store[key]})
+                body: JSON.stringify({rating:store[key],
+                                      stds: stds[key]  
+                })
             })
         // const result = await res.json()
         // console.log(result)
@@ -63,7 +65,8 @@ export const addRating=async (store) =>{
        
 
 export const getAllRatings=async () =>{
-    const store = {}
+    const store = {};
+    const stds = {}
     const calcAverage=arr=>{
         let avg = arr.reduce((a,b)=>{
                 return (a+b) },
@@ -86,6 +89,7 @@ export const getAllRatings=async () =>{
     })
     
     for(let key in store){
+        stds[key] = store[key].length
         store[key] = calcAverage(store[key])
     }
 
@@ -100,7 +104,7 @@ export const getAllRatings=async () =>{
     
     // console.log(store)
 
-    addRating(store)
+    await addRating(store, stds)
 
     return topRated
 }
