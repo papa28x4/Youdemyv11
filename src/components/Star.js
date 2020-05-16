@@ -13,12 +13,15 @@ class Star extends Component {
 
     componentDidUpdate(prevProps, prevState){
       const {index, sVideos} = this.props;
-      if(prevProps.sVideos[index] !== sVideos[index]){
-        this.setState({
-          aggregateRating: sVideos[index].rating,
-          students: sVideos[index].stds
-        });
+      if(prevProps.sVideos && sVideos){
+        if(prevProps.sVideos[index] !== sVideos[index]){
+          this.setState({
+            aggregateRating: sVideos[index].rating,
+            students: sVideos[index].stds
+          });
+        }
       }
+      
     }
 
     componentDidMount(){
