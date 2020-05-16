@@ -8,7 +8,7 @@
 ## **Built with**
 * React
 * Google OAuth.
-* Imgur api
+* Cloudinary api
 * JsonServer
 
 
@@ -26,8 +26,10 @@
 ## **Stretch Case**
 
 * Students can search for courses by title, instructor and category
-* Instructor can edit video properties in the event of a mistake 
-* Instructors can view aggregate ratings for each video
+* Instructors & Students can view aggregate ratings for each video
+* Instructor can delete video and edit video properties in the event of a mistake
+* Added Pagination and Sorting
+
 
 ## **Instructor View**
 ![Instructor view](https://i.ibb.co/4pjNR8f/instructor-dashboard.png)
