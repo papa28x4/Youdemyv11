@@ -37,8 +37,7 @@
 ![Instructor view](https://i.ibb.co/4pjNR8f/instructor-dashboard.png)
 
 
-## **Student View**
-![Student view](https://i.ibb.co/bs5YZ4y/youdemy.png)
+
 
 
 
