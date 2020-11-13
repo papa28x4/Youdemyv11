@@ -7,8 +7,10 @@
 
 ## **Built with**
 * React
-* Google OAuth.
-* Cloudinary api
+* BootStrap
+* Google OAuth
+* Imgur API
+* Cloudinary API
 * JsonServer
 
 
@@ -36,7 +38,7 @@
 
 
 ## **Student View**
-![Student view](https://i.ibb.co/BKMRq8G/student-dashboard.png)
+![Student view](https://i.ibb.co/bs5YZ4y/youdemy.png)
 
 
 
